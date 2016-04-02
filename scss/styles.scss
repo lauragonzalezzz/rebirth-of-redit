@@ -3,3 +3,19 @@ $light : honeydew;
 body{
   background-color: $light;
 }
+
+#container{
+  border: 2px solid red;
+
+  .card{
+    border: 2px solid blue;
+    padding: 10px;
+
+    .title{
+
+      .score{
+
+      }
+    }
+  }
+}
