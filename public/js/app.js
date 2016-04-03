@@ -11,6 +11,9 @@ dataBtn.addEventListener('click', function(event){
 });
 
 function getData(){
+
+  userInput.value = '';
+
   var container = document.getElementById('container');
   container.innerHTML = "";
 
