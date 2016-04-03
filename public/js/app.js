@@ -60,15 +60,6 @@ function getData(){
     panelBody.classList.add('panel-body');
     card.appendChild(panelBody);
 
-    var dateCreated = document.createElement('div');
-    var date = new Date(allTheThings.data.children[i].data.created*1000);
-    dateCreated.innerHTML = "Created on " + date;
-    panelBody.appendChild(dateCreated);
-
-    var author = document.createElement('span');
-    author.className = "author";
-    author.innerHTML = " by " + allTheThings.data.children[i].data.author;
-    dateCreated.appendChild(author);
 
     if (allTheThings.data.children[i].data.thumbnail !== "self" &&
       allTheThings.data.children[i].data.thumbnail !== "default"){
@@ -81,6 +72,16 @@ function getData(){
     if ((allTheThings.data.children[i].data.url.search(".gif") !== -1) && (allTheThings.data.children[i].data.url.search(".gifv")) === -1){
       thumbnail.src = allTheThings.data.children[i].data.url;
     };
+
+    var dateCreated = document.createElement('div');
+    var date = new Date(allTheThings.data.children[i].data.created*1000);
+    dateCreated.innerHTML = "Created on " + date;
+    panelBody.appendChild(dateCreated);
+
+    var author = document.createElement('span');
+    author.className = "author";
+    author.innerHTML = " by " + allTheThings.data.children[i].data.author;
+    dateCreated.appendChild(author);
 
     // var testOuterPanelDiv = document.createElement('div');
     // testOuterPanelDiv.classList.add('panel');

@@ -1,5 +1,5 @@
 body {
-  background-color: honeydew; }
+  background-color: white; }
 
 header {
   background-color: white; }
@@ -7,16 +7,15 @@ header {
     width: 115px; }
 
 #container {
-  border: 2px solid red;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  align-content: space-around; }
+  align-content: flex-start;
+  border: 1px solid red; }
 
 .card {
-  border: 2px solid blue;
   margin: 25px;
-  max-width: 25%; }
+  max-width: 20%; }
 
 .panel-heading {
   font-size: 30px;

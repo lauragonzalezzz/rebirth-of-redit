@@ -1,8 +1,13 @@
 $light : honeydew;
 
 body{
-  background-color: $light;
+  background-color: white;
 }
+
+.jumbotron{
+
+}
+
 header{
 
   background-color: white;
@@ -13,36 +18,24 @@ header{
 }
 
 #container{
-  border: 2px solid red;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  align-content: space-around;
+  align-content: flex-start;
+  border: 1px solid red;
 }
 
 .card{
-  border: 2px solid blue;
   // flex: 0 1 20%;
   // display: flex;
   // flex-flow: row wrap;
   // min-height: 300px;
   margin: 25px;
-  max-width: 25%;
+  max-width: 20%;
 }
+
 
 .panel-heading{
   font-size: 30px;
   text-align: center;
-}
-// .title{
-//   // text-decoration: none;
-// }
-
-.score{
-
-}
-
-.thumbnail{
-  // max-height: 90%;
-  // flex: 0 1 90%;
 }
