@@ -2,16 +2,20 @@ var dataBtn = document.getElementById('dataBtn');
 dataBtn.addEventListener('click', function(event){
   event.preventDefault();
 
+  var userInput = document.getElementById('userInput');
+
   var dataRequest = new XMLHttpRequest();
   dataRequest.addEventListener('load', getData);
-  dataRequest.open('GET', "https://www.reddit.com/r/BackyardChickens.json");
+  dataRequest.open('GET', "https://www.reddit.com/r/" + userInput.value + ".json");
   dataRequest.send();
 });
 
 function getData(){
+  var container = document.getElementById('container');
+  container.innerHTML = "";
+
   var allTheThings = JSON.parse(this.responseText);
 
-  var container = document.getElementById('container');
 
   for (var i = 0; i < allTheThings.data.children.length; i++){
 
@@ -31,15 +35,6 @@ function getData(){
       title.appendChild(sticky);
     };
 
-    var score = document.createElement('div');
-    score.innerHTML = allTheThings.data.children[i].data.score;
-    score.className = "score";
-    card.appendChild(score);
-
-    if (score < 100){
-      score.classList.add('excellentScore');
-    };
-
     var dateCreated = document.createElement('div');
     var date = new Date(allTheThings.data.children[i].data.created*1000);
     dateCreated.innerHTML = "Created on " + date;
@@ -56,6 +51,9 @@ function getData(){
       thumbnail.src = allTheThings.data.children[i].data.thumbnail;
       thumbnail.className = "thumbnail";
       card.appendChild(thumbnail);
+    };
+    if (allTheThings.data.children[i].data.url.search(".gif") !== -1){
+      thumbnail.src = allTheThings.data.children[i].data.url;
     };
 
   }; //Ends FOR loop
