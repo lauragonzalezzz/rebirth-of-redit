@@ -3,6 +3,7 @@ body {
 
 #container {
   border: 2px solid red; }
-  #container .card {
-    border: 2px solid blue;
-    padding: 10px; }
+
+.card {
+  border: 2px solid blue;
+  padding: 10px; }
