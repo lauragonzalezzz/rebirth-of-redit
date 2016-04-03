@@ -3,25 +3,46 @@ $light : honeydew;
 body{
   background-color: $light;
 }
+header{
+
+  background-color: white;
+
+  .logo{
+    width: 115px;
+  }
+}
 
 #container{
   border: 2px solid red;
-
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: space-around;
 }
 
 .card{
   border: 2px solid blue;
-  padding: 10px;
+  // flex: 0 1 20%;
+  // display: flex;
+  // flex-flow: row wrap;
+  // min-height: 300px;
+  margin: 25px;
+  max-width: 25%;
 }
 
-.title{
-
+.panel-heading{
+  font-size: 30px;
+  text-align: center;
 }
+// .title{
+//   // text-decoration: none;
+// }
 
 .score{
 
 }
 
 .thumbnail{
-
+  // max-height: 90%;
+  // flex: 0 1 90%;
 }
